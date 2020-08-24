@@ -48,7 +48,7 @@
                               <label>Color</label>
                             </div>
                             <div class="col-md-10">
-                              <input type="number" class="form-control" formControlName="color">
+                              <input type="text" class="form-control" formControlName="color">
                             </div>
                           </div>
                         </div>
@@ -56,21 +56,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="row">
-                      <div class="col-md-2">
-                        <label class="bmd-label-floating">Gender</label>
-                      </div>
-                      <div class="col-md-6">
-                        <select class="form-control" >
-
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button  type="submit" class="btn btn-primary pull-right">Add</button>
+                <button *ngIf="this.sttAdd" (click)="addProduct()" type="submit" class="btn btn-primary pull-right">Add</button>
+                <button *ngIf="!this.sttAdd" (click)="addProduct()" type="submit" class="btn btn-primary pull-right">Update</button>
                 <div class="clearfix"></div>
               </form>
             </div>

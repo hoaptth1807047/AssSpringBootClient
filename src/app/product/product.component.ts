@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {Dog} from '../../model/dog';
-import {HttpClient} from '@angular/common/http';
-import {ServiceService} from '../service.service';
+import { Component, OnInit } from '@angular/core';
+import { Dog } from '../../model/dog';
+import { HttpClient } from '@angular/common/http';
+import { ServiceService } from '../service.service';
 
 @Component({
   selector: 'app-product',
@@ -27,4 +27,19 @@ export class ProductComponent implements OnInit {
     });
   }
 
+  delete(id) {
+    var confirmed = confirm('Delete this product?');
+    if (confirmed) {
+      this.service.delete(id).subscribe(
+        response => {
+          console.log(response);
+        },
+        error => {
+          console.log(error);
+        }
+      );
+      alert("Delete Succesfully!");
+      return window.location.href = '/product';
+    }
+  }
 }

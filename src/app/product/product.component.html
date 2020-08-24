@@ -28,6 +28,7 @@
               <th>
                 Status
               </th>
+              <th></th>
               </thead>
               <tbody>
               <tr *ngFor="let item of listDog">
@@ -43,14 +44,22 @@
                 <td>
                   {{item.color}}
                 </td>
-                <td>
-                  {{item.gender}}
+                <td *ngIf="item.gender == 0">
+                  Male
+                </td>
+                <td *ngIf="item.gender == 1">
+                  Female
+                </td>
+                <td *ngIf="item.status == 1">
+                  Active
+                </td>
+                <td *ngIf="item.status == 2">
+                  Deactive
                 </td>
                 <td>
-                  {{item.status}}
-                </td>
-                <td>
-                  {{item.birthday}}
+                  <a href=""><i class="material-icons">description</i></a>
+                  <a [routerLink]="['/product/create-edit']" [queryParams]="{id: item.id}"><i class="material-icons">edit</i></a>
+                  <a (click)="delete(item.id)"><i class="material-icons">delete</i></a>
                 </td>
               </tr>
               </tbody>
