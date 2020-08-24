@@ -1,0 +1,63 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card card-plain">
+        <div class="card-header card-header-primary">
+          <h4 class="card-title mt-0"> Product</h4>
+          <p class="card-category"></p>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead class="">
+              <th>
+                ID
+              </th>
+              <th>
+                Name
+              </th>
+              <th>
+                Breed Name
+              </th>
+              <th>
+                Color
+              </th>
+              <th>
+                Gender
+              </th>
+              <th>
+                Status
+              </th>
+              </thead>
+              <tbody>
+              <tr *ngFor="let item of listDog">
+                <td>
+                  {{item.id}}
+                </td>
+                <td>
+                  {{item.name}}
+                </td>
+                <td>
+                  {{item.breedName}}
+                </td>
+                <td>
+                  {{item.color}}
+                </td>
+                <td>
+                  {{item.gender}}
+                </td>
+                <td>
+                  {{item.status}}
+                </td>
+                <td>
+                  {{item.birthday}}
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

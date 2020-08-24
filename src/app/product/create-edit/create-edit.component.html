@@ -1,0 +1,83 @@
+<div class="main-panel">
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8 container">
+          <div class="card">
+            <div class="card-header card-header-primary">
+              <h4 class="card-title mt-0"> Add Product</h4>
+              <p class="card-category"></p>
+            </div>
+            <div class="card-body">
+              <form [formGroup]="formCreated">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-1">
+                          <label>Name</label>
+                        </div>
+                        <div class="col-md-11">
+                          <input type="text" class="form-control" formControlName="name">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-1">
+                          <label>Breed Name</label>
+                        </div>
+                        <div class="col-md-11">
+                          <input type="text" class="form-control" formControlName="breedName">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <div class="row">
+                            <div class="col-md-2">
+                              <label>Color</label>
+                            </div>
+                            <div class="col-md-10">
+                              <input type="number" class="form-control" formControlName="color">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-md-2">
+                        <label class="bmd-label-floating">Gender</label>
+                      </div>
+                      <div class="col-md-6">
+                        <select class="form-control" >
+
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button  type="submit" class="btn btn-primary pull-right">Add</button>
+                <div class="clearfix"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
